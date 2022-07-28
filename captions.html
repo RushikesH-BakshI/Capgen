@@ -1,0 +1,92 @@
+<!DOCTYPE html  >
+<head>
+    <title>
+        CapGen
+    </title>
+    <link rel = "icon" href="Logo 1.png" type="image/x - icon">
+</head>
+    <body>
+        The captions are
+    <script>
+                function printCap() {
+        var count = 1
+        var match = ""
+        var userInput = document.getElementById("submission").value
+
+        captions = {
+            1: "A good teacher can inspire hope, ignite the imagination, and instill a love of learning.",
+
+            2: "You may not always have a comfortable life and you will not always be able to solve all of the world’s problems at once but don’t ever underestimate the importance you can have because history has shown us that courage can be contagious and hope can take on a life of its own.",
+            
+            3: "All the great things are simple, and many can be expressed in a single word: freedom, justice, honor, duty, mercy, hope.",
+
+            4: "Hope lies in dreams, in imagination, and in the courage of those who dare to make dreams into reality.",
+
+            5: "Hope is the thing with feathers that perches in the soul and sings the tune without the words and never stops at all.",
+
+            6: "The very least you can do in your life is figure out what you hope for. And the most you can do is live inside that hope. Not admire it from a distance but live right in it, under its roof.",
+
+            7: "Hope can be a powerful force. Maybe there’s no actual magic in it, but when you know what you hope for most and hold it like a light within you, you can make things happen, almost like magic.",
+
+            8: "But those who hope in the Lord will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint.",
+
+            9: "For I know the plans I have for you,’ declares the Lord, ‘plans to prosper you and not to harm you, plans to give you hope and a future.",
+
+            10: "To them God has chosen to make known among the Gentiles the glorious riches of this mystery, which is Christ in you, the hope of glory.",
+
+            11: "May the God of hope fill you with all joy and peace as you trust in him, so that you may overflow with hope by the power of the Holy Spirit.",
+
+            12: "Now I know in part; then I shall know fully, even as I am fully known. And now these three remain: faith, hope, and love; but the greatest of these is love.",
+
+            13: "You will be secure, because there is hope; you will look about you and take your rest in safety.",
+
+            14: "Most of the important things in the world have been accomplished by people who have kept on trying when there seemed to be no hope at all.",
+
+            15: "Hang on to your hat. Hang on to your hope. And wind the clock, for tomorrow is another day.",
+
+            16: "Hope is the thing with feathers that perches in the soul and sings the tune without the words and never stops at all.",
+
+            17: "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.Hope springs eternal in the human breast.",
+
+            18: "Hope costs nothing.",
+
+            19: "Hope is important because it can make the present moment less difficult to bear. If we believe that tomorrow will be better, we can bear a hardship today.",
+
+            20: "This new day is too dear, with its hopes and invitations, to waste a moment on the yesterdays.",
+
+        }
+        var outer = document.querySelector(".parallax3")
+        var head = document.createElement("h2")
+        var element = document.getElementById("toprint")
+        var para = document.createElement("p")
+
+        outer.style.minHeight = "700px"
+        outer.style.backgroundAttachment = "fixed"
+        outer.style.backgroundImage = "url('gradient background for quotes.jpg')"
+
+        element.style.backgroundColor = "white"
+        head.setAttribute("style", "color:#0000FF")
+        head.innerHTML = "Search Results:"
+
+        outer.insertBefore(head, element)
+        element.appendChild(para)
+
+        for (i in captions) {
+            if (captions[i].toLowerCase().includes(userInput.toLowerCase())) 
+            {
+                match = match + count + ":" + captions[i] + "<br>"
+                count += 1
+            }
+        }
+        if(count!=1)
+        para.innerHTML = match
+        else
+        para.innerHTML="<h2>No Results Found<h2>"
+                }
+        function clearit() {
+            document.getElementById('submission').value = ' '
+            document.getElementById('result').innerHTML = ' '
+        }
+        </script>
+    </body>
+</html>
